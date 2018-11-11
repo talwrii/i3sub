@@ -1,0 +1,6 @@
+venv
+build
+*.egg-info
+*.pyc
+dist
+.ropeproject
