@@ -39,7 +39,7 @@ I would be very interesting in including scripts written by others.
 
 # Implementing this tool using `i3-msg`
 
-The utility `i3-msg` which is included with `i3` can perform similar functionality to this tool. Which the caveat that this is provided in a more low-level (and hence difficult-to-understand and error-prone) fashion.
+The utility `i3-msg` included with `i3` can perform similar functionality to this tool, with the caveat that `i3-msg` is more low-level and general-purpose (and hence difficult-to-understand and error-prone).
 
 The following command will output every event to do with workspaces.
 
@@ -50,7 +50,7 @@ This command *should* output all events (events are documented [here](https://i3
 
     i3-msg -t subscribe -m '["workspace", "output", "mode", "window", "barconfig_update", "binding", "shutdown", "tick"]'
 
-The advantages of `i3sub` over `i3-msg` are i) command line options, ii) preventing one from making (undetected) errors when typing.
+The advantages of `i3sub` over `i3-msg` are command line options,  preventing one from making (undetected) errors when typing.
 
 # Usage
 
@@ -95,10 +95,10 @@ optional arguments:
 
 While researching similar tools, I used the following searches:
 
-# [i3 event](https://github.com/search?q=i3+event) on github 
+* [i3 event](https://github.com/search?q=i3+event) on github 
 * ["i3 subscribe" on GitHub](https://github.com/search?utf8=%E2%9C%93&q=i3+subscribe&type=)
 * ["i3 message" on GitHub](https://github.com/search?q=i3+message)
-# [i3wm event](https://github.com/search?q=i3+event) on github (on 2018-11-11)
+* [i3wm event](https://github.com/search?q=i3+event) on github (on 2018-11-11)
 * ["i3wm subscribe" on GitHub](https://github.com/search?utf8=%E2%9C%93&q=i3+subscribe&type=)
 * ["i3wm message" on GitHub](https://github.com/search?q=i3+message)
 * ["action on event" on the i3wm reddit](https://www.reddit.com/r/i3wm/search?q=action%20on%20event&restrict_sr=1)
