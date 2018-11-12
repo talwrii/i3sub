@@ -7,6 +7,16 @@ Also provides a library, `i3sub.spawn`, to write tools that spawn programs in re
 
 Requires [Python3](https://www.python.org/download/releases/3.0/) but can co-exist with python2.
 
+# See also (and self-promotion)
+
+People interested in this tool might also be interested
+
+* [i3parse](https://github.com/talwrii/i3parse) (by author) -- A tool to parse your i3 configuration and programmatically query it. List keybindings, find free keys, search commands.
+* [i3-clever-layout](https://github.com/talwrii/i3-clever-layout) (by author) -- An extension of i3's layout saving and restoring feature that removes the need for per layout configuration (at the price of ahead-of-time general configuration)
+* [i3-rofi-mark](https://github.com/talwrii/i3-rofi-mark) (by author) -- A tool to manual add marks to i3 windows
+
+The author also maintains a list of potentially interesting tools they have written [here](https://github.com/talwrii/tools).
+
 # Installing
 
 ```
@@ -86,23 +96,23 @@ optional arguments:
 
 
 ## Discussion
-
 * [This reddit post](https://www.reddit.com/r/i3wm/comments/8iu51c/how_to_run_a_command_when_a_new_workspace_is/) discusses using `i3ipc` to run commands when a new workspace is created.
 * [This reddit post](https://www.reddit.com/r/i3wm/comments/4b45p7/auto_start_applications_on_entering_empty/d16sj5w/) is on the same topic.
 * [The i3 documentation](https://i3wm.org/docs/ipc.html#_subscribing_to_events) discusses subscribing to events.
-## Search terms
 * `i3-ipc` was the previous name of the `i3-msg` utility.
 
+## Search terms
 While researching similar tools, I used the following searches:
 
-* [i3 event](https://github.com/search?q=i3+event) on github 
+* ["i3 event" on GitHub](https://github.com/search?q=i3+event)
 * ["i3 subscribe" on GitHub](https://github.com/search?utf8=%E2%9C%93&q=i3+subscribe&type=)
 * ["i3 message" on GitHub](https://github.com/search?q=i3+message)
-* [i3wm event](https://github.com/search?q=i3+event) on github (on 2018-11-11)
+* ["i3wm event" on GitHub](https://github.com/search?q=i3+event)
 * ["i3wm subscribe" on GitHub](https://github.com/search?utf8=%E2%9C%93&q=i3+subscribe&type=)
 * ["i3wm message" on GitHub](https://github.com/search?q=i3+message)
 * ["action on event" on the i3wm reddit](https://www.reddit.com/r/i3wm/search?q=action%20on%20event&restrict_sr=1)
 * ["subscribe to event" on the i3wm reddit](https://www.reddit.com/r/i3wm/search?q=subscribe%20to%20event&restrict_sr=1)
 * ["run new workspace" on the i3wm reddit](https://www.reddit.com/r/i3wm/search?q=run%20new%20workspace&restrict_sr=1)
 * ["i3 subscribe" on Google](https://www.google.com/search?q=i3+subscribe)
+* ["i3 event" on Google](https://www.google.com/search?q=i3+event)
 
