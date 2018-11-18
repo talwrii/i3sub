@@ -5,6 +5,8 @@ A command-line program to output a stream of asynchronous events from the [i3](h
 
 `i3sub` also provides a library, `i3sub.spawn`, to write tools that spawn programs in response to events among other actions.
 
+You could use this tool to do things like: spawn programs when you visit a workspace, update a display when you move between windows, save a list of keybindings (which you care rerun), automatically save and restore the layout on a desktop (together with i3-clever-layout).
+
 Requires [Python 3](https://www.python.org/download/releases/3.0/) but can co-exist with Python 2.
 
 # See also (and self-promotion)
@@ -80,7 +82,6 @@ with_workspace(*args, **kwds)
 
 # Cook book
 
-
 Similar functionality can be created using `i3ipc` directly. It is hoped that utilities made with `i3sub` are easier to debug (as well as test) than the equivalent tools with `i3ipc`.
 
 I would be very interesting in including scripts written by others.
@@ -125,9 +126,7 @@ optional arguments:
 
 # Alternatives and prior work
 
-
 ## Code
-
 * [i3ipc](https://github.com/acrisci/i3ipc-python) is the underlying library used by i3sub. The link provides an example application. It is hoped that this tool i) easier to debug; ii) more discoverable, since it is a command line tool; iii) language agnostic.
 * [This question](https://faq.i3wm.org/question/5721/how-do-i-subscribe-to-i3-events-using-bash-easily.1.html) provides perl script for a similar purpose.
 * [i3event](https://github.com/samuelotter/i3event.git) is a program that allows one to run commands in response to events from the i3. I found it difficult to work out which i3 events I should respond to, so I wrote this tool.
@@ -155,3 +154,11 @@ While researching similar tools, I used the following searches:
 * ["run new workspace" on the i3wm reddit](https://www.reddit.com/r/i3wm/search?q=run%20new%20workspace&restrict_sr=1)
 * ["i3 subscribe" on Google](https://www.google.com/search?q=i3+subscribe)
 * ["i3 event" on Google](https://www.google.com/search?q=i3+event)
+
+# Testing
+
+This tool is untested. Because this tool interacts with `i3` testing is rather intricate - though not impossible. It would not be particularly difficult to record and replay streams of event from `i3` or automate i3 with `i3-msg`.
+
+## Installation
+
+Some very basic testing is provided with tox.  This tests that the code loads.
