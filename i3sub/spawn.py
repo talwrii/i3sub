@@ -21,7 +21,10 @@ def spawn_on(name, command, conn=None):
     with with_conn(conn) as conn:
         with with_workspace(name, conn):
             pin_workspace(conn)
-            subprocess.Popen(command)
+            spawn_on_raw(name, command)
+
+def spawn_on_raw(name, command):
+    subprocess.Popen('workspace web; exec {}'.format(pipe.quote(command), shell=True))
 
 @contextlib.contextmanager
 def with_workspace(name, conn=None):
