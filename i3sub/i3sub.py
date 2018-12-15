@@ -1,4 +1,5 @@
 import argparse
+import sys
 import json
 import pprint
 import i3ipc
@@ -31,12 +32,17 @@ class Handler(object):
         self.formatter = formatter
         self.filter = filter
 
-    def handle(self, connection, event):
+    def handle(self, connection, event=None):
         result = parse_event(event)
-        if self.filter(result):
-            print(self.formatter(result))
+        if result is not None and self.filter(result):
+            try:
+                print(self.formatter(result))
+            except BrokenPipeError:
+                sys.exit(1)
 
 def parse_event(event):
+    if event is None:
+        return None
     result = dict()
     for k, v in vars(event).items():
         new_k, new_value = encode(k, v)
