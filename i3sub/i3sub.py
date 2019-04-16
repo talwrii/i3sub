@@ -1,4 +1,5 @@
 import argparse
+import time
 import sys
 import json
 import pprint
@@ -34,6 +35,7 @@ class Handler(object):
 
     def handle(self, connection, event=None):
         result = parse_event(event)
+        result['timestamp'] = time.time()
         if result is not None and self.filter(result):
             try:
                 print(self.formatter(result))
