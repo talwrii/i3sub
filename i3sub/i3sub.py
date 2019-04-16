@@ -37,6 +37,7 @@ class Handler(object):
         if result is not None and self.filter(result):
             try:
                 print(self.formatter(result))
+                sys.stdout.flush()
             except BrokenPipeError:
                 sys.exit(1)
 
